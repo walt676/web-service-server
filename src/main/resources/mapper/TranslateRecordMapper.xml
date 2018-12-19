@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.demo181108.userdemo.dao.TranslateRecordDao" >
+
+    <resultMap id="tr_Map" type="com.demo181108.userdemo.domain.TranslateRecord">
+        <id column="tr_id" property="tr_id" jdbcType="INTEGER" />
+        <result column="user_id" property="user_id" jdbcType="VARCHAR" />
+        <result column="tr_original" property="tr_original" jdbcType="VARCHAR" />
+        <result column="tr_result" property="tr_result" jdbcType="VARCHAR"/>
+        <result column="tr_time" property="tr_time" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="tr_List">
+        tr_id, user_id, tr_original, tr_result, tr_time
+    </sql>
+
+    <!--查询记录总数-->
+    <select id="selectCount" resultType="int">
+        SELECT count(*) FROM translate_record
+    </select>
+
+    <!--查询记录总数-->
+    <select id="selectCountByUserId" parameterType="java.lang.String" resultType="int">
+        SELECT count(*) FROM translate_record WHERE user_id = #{user_id}
+    </select>
+
+    <!--分页查询-->
+    <select id="findByPage" parameterType="Map" resultMap="tr_Map">
+        select
+        <include refid="tr_List" />
+        from translate_record
+        where user_id = #{user_id}
+        order by tr_time desc
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    <!--插入数据-->
+    <insert id="addTranslateRecord" parameterType="com.demo181108.userdemo.domain.TranslateRecord">
+        INSERT INTO translate_record
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="user_id != null">
+                user_id,
+            </if>
+            <if test="tr_original != null">
+                tr_original,
+            </if>
+            <if test="tr_result != null">
+                tr_result,
+            </if>
+            <if test="tr_time != null">
+                tr_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="user_id != null">
+                #{user_id,jdbcType=VARCHAR},
+            </if>
+            <if test="tr_original != null">
+                #{tr_original,jdbcType=VARCHAR},
+            </if>
+            <if test="tr_result != null">
+                #{tr_result,jdbcType=VARCHAR},
+            </if>
+            <if test="tr_time != null">
+                #{tr_time,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

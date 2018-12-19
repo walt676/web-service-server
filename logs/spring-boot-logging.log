@@ -1,0 +1,109 @@
+2018-12-15 18:35:19.304  INFO 18640 --- [main] c.d.userdemo.UserdemoApplication         : Starting UserdemoApplication on LAPTOP-7FOGB606 with PID 18640 (D:\SSM\maven_SSM-master\userdemo\target\classes started by walt676 in D:\SSM\maven_SSM-master\userdemo)
+2018-12-15 18:35:19.317  INFO 18640 --- [main] c.d.userdemo.UserdemoApplication         : No active profile set, falling back to default profiles: default
+2018-12-15 18:35:21.042  INFO 18640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-15 18:35:21.043  INFO 18640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-12-15 18:35:21.053  INFO 18640 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\walt676\virtual\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\AOMEI Backupper;C:\Program Files\dotnet\;D:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\MATLAB\R2014a\runtime\win64;D:\MATLAB\R2014a\bin;D:\MATLAB\R2014a\polyspace\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Maven\apache-maven-3.5.4\bin;d:\工具\Git\cmd;D:\工具\Git\usr\local;C:\Users\walt676\AppData\Local\Microsoft\WindowsApps;C:\Users\walt676\AppData\Local\Microsoft\WindowsApps;C:\Users\walt676\AppData\Roaming\npm;C:\Users\walt676\AppData\Local\GitHubDesktop\bin;D:\工具\编译器及数据库\Microsoft VS Code\bin;C:\Program Files\Bandizip\;.]
+2018-12-15 18:35:21.247  INFO 18640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-15 18:35:21.842  WARN 18640 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'translatorController': Unsatisfied dependency expressed through field 'translatorService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'translatorServiceImpl' defined in file [D:\SSM\maven_SSM-master\userdemo\target\classes\com\demo181108\userdemo\service\impl\TranslatorServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo181108.userdemo.service.impl.TranslatorServiceImpl]: Constructor threw exception; nested exception is javax.xml.ws.WebServiceException: 无法访问位于以下位置的 WSDL: http://www.webxml.com.cn/WebServices/TranslatorWebService.asmx?wsdl。该操作失败并显示: 
+	www.webxml.com.cn。
+2018-12-15 18:35:21.847  INFO 18640 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-12-15 18:35:21.876 ERROR 18640 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'translatorController': Unsatisfied dependency expressed through field 'translatorService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'translatorServiceImpl' defined in file [D:\SSM\maven_SSM-master\userdemo\target\classes\com\demo181108\userdemo\service\impl\TranslatorServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo181108.userdemo.service.impl.TranslatorServiceImpl]: Constructor threw exception; nested exception is javax.xml.ws.WebServiceException: 无法访问位于以下位置的 WSDL: http://www.webxml.com.cn/WebServices/TranslatorWebService.asmx?wsdl。该操作失败并显示: 
+	www.webxml.com.cn。
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1378) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:846) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:863) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) ~[spring-context-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.0.RELEASE.jar:2.1.0.RELEASE]
+	at com.demo181108.userdemo.UserdemoApplication.main(UserdemoApplication.java:12) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'translatorServiceImpl' defined in file [D:\SSM\maven_SSM-master\userdemo\target\classes\com\demo181108\userdemo\service\impl\TranslatorServiceImpl.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo181108.userdemo.service.impl.TranslatorServiceImpl]: Constructor threw exception; nested exception is javax.xml.ws.WebServiceException: 无法访问位于以下位置的 WSDL: http://www.webxml.com.cn/WebServices/TranslatorWebService.asmx?wsdl。该操作失败并显示: 
+	www.webxml.com.cn。
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1270) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1164) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:498) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:273) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1239) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1166) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo181108.userdemo.service.impl.TranslatorServiceImpl]: Constructor threw exception; nested exception is javax.xml.ws.WebServiceException: 无法访问位于以下位置的 WSDL: http://www.webxml.com.cn/WebServices/TranslatorWebService.asmx?wsdl。该操作失败并显示: 
+	www.webxml.com.cn。
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:184) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1262) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 30 common frames omitted
+Caused by: javax.xml.ws.WebServiceException: 无法访问位于以下位置的 WSDL: http://www.webxml.com.cn/WebServices/TranslatorWebService.asmx?wsdl。该操作失败并显示: 
+	www.webxml.com.cn。
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.tryWithMex(RuntimeWSDLParser.java:250) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:231) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:194) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:163) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:348) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:306) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:215) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:196) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:192) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:104) ~[na:1.8.0_151]
+	at javax.xml.ws.Service.<init>(Service.java:77) ~[na:1.8.0_151]
+	at com.demo181108.userdemo.webxml.TranslatorWebService.<init>(TranslatorWebService.java:44) ~[classes/:na]
+	at com.demo181108.userdemo.service.impl.TranslatorServiceImpl.<init>(TranslatorServiceImpl.java:12) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_151]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_151]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172) ~[spring-beans-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	... 32 common frames omitted
+Caused by: java.net.UnknownHostException: www.webxml.com.cn
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184) ~[na:1.8.0_151]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_151]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_151]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_151]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_151]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_151]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_151]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_151]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_151]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_151]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564) ~[na:1.8.0_151]
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492) ~[na:1.8.0_151]
+	at java.net.URL.openStream(URL.java:1045) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:984) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:385) ~[na:1.8.0_151]
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:216) ~[na:1.8.0_151]
+	... 48 common frames omitted
+
+2018-12-15 18:38:01.175  INFO 14568 --- [main] c.d.userdemo.UserdemoApplication         : Starting UserdemoApplication on LAPTOP-7FOGB606 with PID 14568 (D:\SSM\maven_SSM-master\userdemo\target\classes started by walt676 in D:\SSM\maven_SSM-master\userdemo)
+2018-12-15 18:38:01.178  INFO 14568 --- [main] c.d.userdemo.UserdemoApplication         : No active profile set, falling back to default profiles: default
+2018-12-15 18:38:02.460  INFO 14568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-12-15 18:38:02.461  INFO 14568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-12-15 18:38:02.468  INFO 14568 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\app\walt676\virtual\product\12.2.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_151\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;d:\AOMEI Backupper;C:\Program Files\dotnet\;D:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;D:\MATLAB\R2014a\runtime\win64;D:\MATLAB\R2014a\bin;D:\MATLAB\R2014a\polyspace\bin;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\Maven\apache-maven-3.5.4\bin;d:\工具\Git\cmd;D:\工具\Git\usr\local;C:\Users\walt676\AppData\Local\Microsoft\WindowsApps;C:\Users\walt676\AppData\Local\Microsoft\WindowsApps;C:\Users\walt676\AppData\Roaming\npm;C:\Users\walt676\AppData\Local\GitHubDesktop\bin;D:\工具\编译器及数据库\Microsoft VS Code\bin;C:\Program Files\Bandizip\;.]
+2018-12-15 18:38:02.628  INFO 14568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-12-15 18:38:04.207  INFO 14568 --- [main] c.d.userdemo.UserdemoApplication         : Started UserdemoApplication in 3.489 seconds (JVM running for 9.513)
+2018-12-15 18:38:06.835  INFO 14568 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-15 18:39:19.090  INFO 14568 --- [http-nio-8088-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2018-12-15 18:39:19.427  INFO 14568 --- [http-nio-8088-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
